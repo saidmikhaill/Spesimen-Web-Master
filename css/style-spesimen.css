@@ -1,0 +1,344 @@
+
+/* 1. Import (jika belum via @import di CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap'); 
+
+/* 2. Default font untuk halaman daftar spesimen: Poppins */
+body.daftar-spesimen {
+   /* background & layout */
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 2rem;
+
+   /* typography */
+  font-family: 'Poppins', sans-serif;
+  color: #003B87;
+  margin: 0;
+}
+
+
+/* 4. Navbar & Container */
+.navbar {
+  background-color: #003B87;
+  padding: 1rem 2rem;
+}
+/* 4. Font untuk tombol kembali: Poppins */
+.btn-back {
+  color: #ffffff;           /* teks putih */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;          /* ukuran font */
+  text-decoration: none;    /* tanpa underline */
+}
+/* 3. Font untuk judul navbar: Montserrat */
+.nav-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem; /* sesuaikan */
+  color: #ffffff;           /* pastikan putih */
+}
+
+/* 5. Cards Layout */
+.card {
+  position: relative; /* penting untuk posisi gambar spesimen */
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding-top: 90px; /* ruang untuk gambar spesimen */
+  text-align: center;
+  margin: 20px 0;
+  overflow: visible; /* Ini penting agar lingkaran tetap terlihat */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #0F172A;
+}
+
+.card-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.5rem 1rem 1rem;
+}
+
+
+
+/* 6. Tombol */
+
+.btn-primary {
+  background-color: #003B87;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: #002C66;
+}
+/* 7. Gambar Spesimen (lingkaran) */
+.specimen {
+  position: absolute;
+  top: 10px; /* Gambar masuk ke dalam bagian atas card */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 50%;
+  width: 86px;
+  height: 86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.specimen img {
+  width: 97%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+/* ===== DETAIL PAGE ===== */
+body.detail-page {
+  /* background & layout */
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 2rem;
+
+   /* typography */
+  font-family: 'Montserrat', sans-serif;
+  color: #003B87;
+  margin: 0;
+}
+
+/* NAVBAR sudah diatur di global */
+
+/* Wadah gambar bulat besar */
+.detail-specimen-img {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.detail-specimen-img img {
+  width: 95%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Nama spesimen */
+h3#specimen-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222222;
+  margin-top: 1rem;
+}
+/* Nama Latin */
+p#specimen-latin {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  color: #666666;
+  margin-bottom: 0.5rem;
+}
+/* Badge jenis */
+span#specimen-type {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+}
+/* Kotak konten deskripsi & manfaat */
+.content-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+/* Heading section (“Deskripsi”, “Manfaat”) */
+.content-box h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #003B87;
+  margin-bottom: 1rem;
+}
+/* Paragraf Deskripsi */
+#specimen-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+/* List Manfaat */
+#specimen-benefits {
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+#specimen-benefits li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+#specimen-benefits li i.bi-dot {
+  color: #28a745;
+  font-size: 1rem;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+}
+
+/* Tombol aksi */
+.content-box .btn-primary,
+.content-box .btn-success {
+  min-width: 160px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.content-box .btn-primary i,
+.content-box .btn-success i {
+  margin-right: 0.5rem;
+}
+
+/* Override warna Bootstrap .text-primary untuk Detail Page */
+body.detail-page .text-primary {
+  color: #003B87 !important;
+}
+/* ===== DETAIL PAGE BUTTONS ===== */
+.btn-video {
+  background-color: #003B87;        /* biru gelap acuan */
+  color: #ffffff;                   /* teks putih */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  min-width: 160px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.btn-video i {
+  margin-right: 0.5rem;
+}
+.btn-video:hover {
+  background-color: #002C66;
+  color: white;
+}
+
+.btn-kuis {
+  background-color: #28a745;        /* hijau acuan (Bootstrap-success) */
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  min-width: 160px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.btn-kuis i {
+  margin-right: 0.5rem;
+}
+.btn-kuis:hover {
+  background-color: #00894D;
+  color: white;
+}
+
+/* css badge type */
+#specimen-type .badge {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Dasar badge */
+.badge-base {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 999px;
+  margin: 0.25rem 0.25rem 0 0;
+}
+
+/* Warna khusus per kategori */
+.badge-daun {
+  background-color: #E0F0FF;
+  color: #0055A4;
+}
+
+.badge-rimpang {
+  background-color: #FFF3CD;
+  color: #B68B00;
+}
+
+.badge-antiseptik {
+  background-color: #DFF5E1;
+  color: #1B7830;
+}
+
+.badge-default {
+  background-color: #eee;
+  color: #444;
+}
+
+
+
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card {
+    margin: 1rem 0;
+  }
+  .specimen {
+    width: 70px;
+    height: 70px;
+    top: 8px;
+  }
+  .detail-specimen-img {
+    width: 180px;
+    height: 180px;
+  }
+  h3#specimen-name {
+    font-size: 1.5rem;
+  }
+  .content-box {
+    padding: 1.5rem;
+  }
+
+}

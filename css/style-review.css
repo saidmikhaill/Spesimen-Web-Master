@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap');
+
+body.review-page {
+  background: #F8FAFC;
+  font-family: 'Poppins', sans-serif;
+  color: #003B87;
+  margin: 0; padding: 0;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #003B87;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+.option {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* default (tidak diklik) */
+.opt-default {
+  background: #f5f5f5;
+}
+
+/* jawaban benar */
+.opt-correct {
+  background: #28a745;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* jawaban salah yang dipilih */
+.opt-wrong {
+  background: #dc3545;
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar .btn-link,
+a.btn-link {
+  text-decoration: none !important;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+  .option { font-size: 0.9rem; }
+}
